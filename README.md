@@ -1,4 +1,7 @@
-🔹 Part 1: Core Visual Design Principles (UI Basics)
+# UI-UX Basic Principles
+
+## Part 1: Core Visual Design Principles (UI Basics)
+
 These form the foundation of visual layout, used by every designer and frontend developer:
 
 - Visual Hierarchy – Guide attention using size, color, position.
@@ -12,9 +15,8 @@ These form the foundation of visual layout, used by every designer and frontend 
 - Typography – Use readable fonts, proper hierarchy.
 - Color Theory – Use colors purposefully for emotion & usability.
 
+## Part 2: UX Principles (User Behavior & Interaction Design)
 
-
-🔹 Part 2: UX Principles (User Behavior & Interaction Design)
 These focus on creating interfaces that are usable, friendly, and purpose-driven:
 
 - User-Centered Design – Design for real user needs, not just visuals.
@@ -29,9 +31,8 @@ These focus on creating interfaces that are usable, friendly, and purpose-driven
 - Hick’s Law – Fewer choices = faster decisions.
 - Fitts’s Law – Bigger & closer targets are easier to click/tap.
 
+## Part 3: Advanced, Web-Specific & Strategic Principles
 
-
-🔹 Part 3: Advanced, Web-Specific & Strategic Principles
 These help with responsive design, performance, cognitive psychology, and product thinking:
 
 - Responsiveness – Layout adapts across devices.
@@ -48,4 +49,3 @@ These help with responsive design, performance, cognitive psychology, and produc
 - Component-Based Design / Atomic Design – Reusable and modular UI elements.
 - Design Systems – Centralized design language (e.g., Material, HIG).
 - Emotional Design – Design to make users feel something (joy, trust, delight).
-
