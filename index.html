@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" id="html" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Design Principles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' };
+
+        if (localStorage.theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans leading-relaxed">
+
+    <!-- Sticky Dark Mode Toggle -->
+    <div class="sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-sm dark:shadow-gray-800">
+        <div class="max-w-4xl px-8 mx-auto p-4 flex justify-between items-center">
+            <!-- Left Side Links -->
+            <div class="flex gap-4">
+                <a href="./index.html" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">UI
+                    Principles</a>
+                <a href="./UX Principles.html" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">UX
+                    Principles</a>
+                <a href="./Advanced Principles.html"
+                    class="text-sm text-blue-600 dark:text-blue-400 hover:underline">Advanced Principles</a>
+            </div>
+            <!-- Right Side Toggle -->
+            <button id="themeToggle"
+                class="flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
+                <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <!-- Icon will be inserted via JS -->
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-8 space-y-12">
+        <!-- Title -->
+        <section>
+            <h1 class="text-4xl font-bold mb-2"> Basic UI Design Principles</h1>
+            <p class="text-gray-600 dark:text-gray-400">
+                These form the foundation of visual layout, used by every designer and frontend developer.
+            </p>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8" />
+
+        <!-- Visual Hierarchy -->
+        <section>
+            <h1 class="text-4xl font-bold">1. Visual Hierarchy</h1>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mt-2">Discover powerful tools for growth</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Get Started</button>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Larger and bolder headings grab attention first. Supporting text is
+                smaller and subdued, and the button stands out as a clear call-to-action.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
+        <section class="text-center">
+            <h1 class="text-5xl font-bold mb-4">Supercharge Your Workflow</h1>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">Organize, collaborate, and conquer your tasks</p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">Try Free</button>
+                <button
+                    class="border border-blue-600 text-blue-600 dark:text-blue-400 px-5 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">Learn
+                    More</button>
+            </div>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>This hero layout uses scale and spacing to guide the user’s eyes. The
+                call-to-action buttons are prominent and styled for visibility.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- Balance -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <h2 class="text-xl font-bold col-span-full">2. Balance</h2>
+            <div class="bg-gray-100 dark:bg-gray-800 p-4 text-center">📷 Product Image</div>
+            <div class="bg-gray-100 dark:bg-gray-800 p-4">
+                <h2 class="text-xl font-semibold mb-2">Balance</h2>
+                <p>Even with different content types, the layout feels stable and visually pleasing.</p>
+            </div>
+            <div
+                class="col-span-full mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>The image and text are given equal space using a two-column layout,
+                creating symmetrical visual balance across the screen.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
+        <section class="flex flex-col md:flex-row items-center gap-6">
+            <div class="text-center p-4">
+                <div class="text-5xl mb-2">🚀</div>
+                <h3 class="text-xl font-semibold">Fast Launch</h3>
+                <p class="text-gray-600 dark:text-gray-400">Get up and running in seconds.</p>
+            </div>
+            <div class="text-center p-4">
+                <div class="text-5xl mb-2">🔒</div>
+                <h3 class="text-xl font-semibold">Secure</h3>
+                <p class="text-gray-600 dark:text-gray-400">Your data stays safe with us.</p>
+            </div>
+            <div
+                class="w-full mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Visual balance is maintained by using matching icon styles, text
+                alignment, and equal spacing between blocks.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- Contrast -->
+        <section>
+            <h2 class="text-xl font-bold mb-2">3. Contrast</h2>
+            <button
+                class="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">Subscribe</button>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Strong background and text color contrast makes the button stand out
+                and
+                improves accessibility in both light and dark modes.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
+        <section class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg dark:shadow-gray-900 max-w-md">
+            <h2 class="text-2xl font-bold text-black dark:text-white mb-2">Bold Move</h2>
+            <p class="text-gray-700 dark:text-gray-300">
+                Using background contrast to separate cards from the page.
+            </p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/30 text-blue-900 dark:text-blue-100 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-700">
+                <strong>Explanation:</strong><br>This card uses shadows and contrasting backgrounds to visually elevate
+                and
+                isolate it from the surrounding content. Combined with padding and shadow, it maintains clear visual
+                separation.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- Alignment -->
+        <section class="max-w-sm">
+            <h2 class="text-xl font-bold mb-2">4. Alignment</h2>
+            <label class="block mb-1 text-sm font-medium">Email</label>
+            <input type="email"
+                class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white px-3 py-2 rounded-md mb-4"
+                placeholder="you@example.com" />
+            <div
+                class="bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-100 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-700">
+                <strong>Explanation:</strong><br>
+                A left-aligned label placed directly above the input field provides a clear, natural reading path. This
+                vertical alignment supports fast form scanning and consistency across inputs.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto my-8">
+        <section class="grid gap-4 max-w-md">
+            <div class="grid grid-cols-4 items-center">
+                <label class="text-sm font-medium col-span-1">Name</label>
+                <input type="text"
+                    class="col-span-3 px-3 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white" />
+            </div>
+            <div class="grid grid-cols-4 items-center">
+                <label class="text-sm font-medium col-span-1">Phone</label>
+                <input type="tel"
+                    class="col-span-3 px-3 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white" />
+            </div>
+            <div
+                class="col-span-full bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-100 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-700">
+                <strong>Explanation:</strong><br>
+                This form uses a 4-column grid to align labels and inputs horizontally. This alignment improves visual
+                rhythm and ensures the input fields are consistently spaced, making the form easier to scan and
+                complete.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+
+        <!-- Proximity -->
+        <section class="max-w-sm">
+            <h2 class="text-xl font-bold mb-2">5. Proximity</h2>
+            <div class="space-y-1">
+                <label class="block text-sm font-medium">Username</label>
+                <input type="text"
+                    class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white px-3 py-2 rounded-md">
+                <span class="text-xs text-red-500">Username is required</span>
+            </div>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Related elements (label, input, error message) are placed closely
+                together
+                to form a visual group.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
+        <section class="max-w-sm">
+            <label class="block text-sm font-medium mb-1">Email</label>
+            <div class="flex space-x-2">
+                <input type="email"
+                    class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white"
+                    placeholder="you@example.com">
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-md">Join</button>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">No spam, unsubscribe anytime.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Input field and CTA button are grouped in one line to show their
+                functional relationship.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- Repetition / Consistency -->
+        <section class="space-y-6">
+            <div>
+                <h2 class="text-xl font-bold mb-2">6. Repetition / Consistency</h2>
+                <div class="space-x-4">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-md">Login</button>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-md">Sign Up</button>
+                </div>
+                <div
+                    class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <strong>Explanation:</strong><br>Buttons use the same style and color theme, reinforcing familiarity
+                    and usability across the interface.
+                </div>
+            </div>
+
+            <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
+
+            <div>
+                <div class="space-x-4">
+                    <button class="bg-purple-600 text-white px-4 py-2 rounded-md">Dashboard</button>
+                    <button class="bg-purple-600 text-white px-4 py-2 rounded-md">Reports</button>
+                    <button class="bg-purple-600 text-white px-4 py-2 rounded-md">Settings</button>
+                </div>
+                <div
+                    class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <strong>Explanation:</strong><br>These repeated buttons follow the same shape, padding, and color
+                    scheme, reinforcing a consistent design language.
+                </div>
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+
+        <!-- White Space -->
+        <section>
+            <h2 class="text-xl font-bold mb-4">7. White Space</h2>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md max-w-md">
+                <h3 class="text-xl font-bold mb-2">Minimalist Design</h3>
+                <p class="text-gray-600 dark:text-gray-400">Less is more. Use space to guide focus and avoid clutter.
+                </p>
+            </div>
+            <div
+                class="mt-4 max-w-md bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Padding and spacing around the elements help declutter the design and
+                improve focus on content.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
+        <section class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow max-w-xl mx-auto text-center space-y-4">
+            <blockquote class="text-xl font-semibold">“This tool changed the way we work!”</blockquote>
+            <cite class="block text-gray-500 dark:text-gray-400 text-sm">— Alex from DevCo</cite>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Adequate space between text blocks makes this testimonial more readable
+                and aesthetically pleasing.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- Scale & Proportion -->
+        <section class="text-center">
+            <h2 class="text-5xl font-extrabold">8. Welcome</h2>
+            <p class="text-base text-gray-500 dark:text-gray-400 mt-2">Start exploring our platform now</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800 max-w-md mx-auto">
+                <strong>Explanation:</strong><br>Larger text size for the heading and smaller size for the body shows
+                how
+                scale directs user attention effectively.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
+        <section class="text-center space-y-2">
+            <h2 class="text-6xl font-black tracking-tight">Big Impact</h2>
+            <p class="text-md text-gray-600 dark:text-gray-400">Small details, huge results.</p>
+            <div
+                class="bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800 max-w-md mx-auto">
+                <strong>Explanation:</strong><br>Proportional scale of headline versus body text shows visual hierarchy
+                and
+                emphasis.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- Typography -->
+        <section class="max-w-lg">
+            <h2 class="text-3xl font-bold mb-2">9. Typography Matters</h2>
+            <h3 class="text-xl font-semibold mb-1 text-gray-700 dark:text-gray-300">Subheading</h3>
+            <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                Clean typography improves readability and builds trust.
+            </p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Different font weights and sizes define a clear visual hierarchy,
+                making
+                content easier to digest.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
+        <section class="space-y-2">
+            <h1 class="text-4xl font-bold">How We Work</h1>
+            <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-300">Clear, Concise, and Structured</h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed">Every font size and weight carries
+                visual meaning. It improves readability and user comprehension.</p>
+            <div
+                class="bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Typography creates structure in the content. Headings, subheadings, and
+                body text all follow a consistent typographic scale.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- Color Theory -->
+        <section class="space-y-2">
+            <h2 class="text-xl font-bold mb-2">10. Color Theory</h2>
+            <div class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 p-2 rounded-md">✔️ Success:
+                Your form has been submitted.</div>
+            <div class="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 p-2 rounded-md">❌ Error: Please enter
+                a valid email.</div>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md">Continue</button>
+            <div
+                class="bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Each color communicates a message: green for success, red for error,
+                and
+                blue for primary actions. This leverages emotional color psychology.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
+        <section class="grid gap-2 max-w-md">
+            <div class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 p-2 rounded-md">⚠️
+                Warning: This will overwrite your changes.</div>
+            <div class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 p-2 rounded-md">ℹ️ Info: Updates
+                happen every hour.</div>
+            <div class="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 p-2 rounded-md">📘 Tip:
+                You can undo from history.</div>
+            <div
+                class="bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>Semantic colors help users instantly recognize the intent of each
+                message
+                (warning, info, tips) using consistent palette and visual tone.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+        const themeIcon = document.getElementById("themeIcon");
+
+        function setTheme(theme) {
+            document.documentElement.classList.toggle("dark", theme === "dark");
+            localStorage.setItem("theme", theme);
+            updateIcon(theme);
+        }
+
+        function updateIcon(theme) {
+            if (theme === "dark") {
+                // Moon Icon
+                themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M17.293 17.293A8 8 0 016.707 6.707a8.001 8.001 0 0010.586 10.586z" />`;
+            } else {
+                // Sun Icon
+                themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 3v1m0 16v1m8.66-9h-1M4.34 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 5a7 7 0 100 14 7 7 0 000-14z" />`;
+            }
+        }
+
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const activeTheme = savedTheme || (prefersDark ? "dark" : "light");
+
+        setTheme(activeTheme);
+
+        themeToggle.addEventListener("click", () => {
+            const isDark = document.documentElement.classList.contains("dark");
+            setTheme(isDark ? "light" : "dark");
+        });
+    </script>
+
+</body>
+
+</html>

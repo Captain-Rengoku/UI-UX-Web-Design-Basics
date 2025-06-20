@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" id="html" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Design Principles Demo (Dark Mode)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: "class" };
+
+        if (localStorage.theme === "dark") {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans leading-relaxed">
+
+    <!-- Sticky Dark Mode Toggle -->
+    <div class="sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-sm dark:shadow-gray-800">
+        <div class="max-w-4xl px-8 mx-auto p-4 flex justify-between items-center">
+            <!-- Left Side Links -->
+            <div class="flex gap-4">
+                <a href="./index.html" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">UI
+                    Principles</a>
+                <a href="./UX Principles.html" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">UX
+                    Principles</a>
+                <a href="./Advanced Principles.html"
+                    class="text-sm text-blue-600 dark:text-blue-400 hover:underline">Advanced Principles</a>
+            </div>
+            <!-- Right Side Toggle -->
+            <button id="themeToggle"
+                class="flex items-center justify-center bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
+                <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <!-- Icon will be inserted via JS -->
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-8 space-y-16 text-gray-800 dark:text-gray-100">
+        <!-- Title -->
+        <section>
+            <h1 class="text-3xl font-bold mb-2">Advanced, Web-Specific & Strategic UX Principles</h1>
+            <p class="text-gray-600 dark:text-gray-400">Designing with responsiveness, performance, psychology, and
+                product
+                strategy in mind.</p>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 1. Responsiveness -->
+        <section id="responsiveness">
+            <h2 class="text-xl font-bold mb-2">1. Responsiveness</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">Card 1</div>
+                <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">Card 2</div>
+                <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">Card 3</div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Grid layout adapts across breakpoints.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Responsive layouts adapt to different screen sizes, ensuring usability on mobile, tablet, and desktop
+                devices.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex-1 bg-white dark:bg-gray-800 p-4 rounded shadow">Sidebar</div>
+                <div class="flex-1 bg-white dark:bg-gray-800 p-4 rounded shadow">Main Content</div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Flex layout shifts from vertical to horizontal with
+                screen size.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Hiding or reflowing elements on smaller screens improves readability and interaction without
+                overwhelming users.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 2. Mobile-First Design -->
+        <section id="mobile-first">
+            <h2 class="text-xl font-bold mb-2">2. Mobile-First Design</h2>
+            <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">
+                <button class="block w-full sm:w-auto bg-blue-600 text-white px-4 py-2 rounded">Tap Me</button>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Built from smallest screens up using Tailwind's
+                mobile-first classes.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Designing for the smallest screen first ensures essential content and interactions work at every
+                breakpoint.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow space-y-2">
+                <input type="text" placeholder="Search..."
+                    class="w-full sm:w-1/2 px-3 py-2 border rounded bg-gray-50 dark:bg-gray-700">
+                <button class="bg-green-600 text-white px-4 py-2 rounded w-full sm:w-auto">Submit</button>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Form elements optimized first for mobile, then
+                enhanced for larger screens.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Starting with mobile ensures content-first structure; enhancements for larger screens come
+                progressively.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 3. Performance Optimization -->
+        <section id="performance">
+            <h2 class="text-xl font-bold mb-2">3. Performance Optimization</h2>
+            <img src="https://www.gstatic.com/webp/gallery/5.webp" loading="lazy" alt="Optimized Image"
+                class="rounded shadow w-full max-w-md" />
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Use of compressed, lazy-loaded assets reduces load
+                time.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Lazy loading defers offscreen images from loading, speeding up initial page load and reducing bandwidth.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <p class="text-sm bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-4 py-2 rounded">
+                ✅ Critical CSS inlined, unused styles purged for faster rendering.
+            </p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Using Tailwind's JIT and PurgeCSS for smaller CSS
+                bundles.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Optimized assets like compressed icons or font subsets reduce total transfer size and improve time to
+                interaction.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 4. Navigation Design -->
+        <section id="navigation">
+            <h2 class="text-xl font-bold mb-2">4. Navigation Design</h2>
+            <nav class="flex gap-4 flex-wrap">
+                <a href="#" class="text-blue-600 dark:text-blue-400 underline">Home</a>
+                <a href="#" class="text-blue-600 dark:text-blue-400 underline">Features</a>
+                <a href="#" class="text-blue-600 dark:text-blue-400 underline">Pricing</a>
+                <a href="#" class="text-blue-600 dark:text-blue-400 underline">Contact</a>
+            </nav>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Clear, scannable links improve discoverability.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Well-labeled links with visual cues make navigation intuitive and improve user orientation across pages.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <nav class="mt-2 flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-3 rounded">
+                <span class="text-sm font-medium">Logo</span>
+                <button class="sm:hidden bg-blue-600 text-white px-2 py-1 rounded">☰</button>
+                <ul class="hidden sm:flex gap-4 text-sm">
+                    <li><a href="#" class="hover:underline">Docs</a></li>
+                    <li><a href="#" class="hover:underline">Blog</a></li>
+                    <li><a href="#" class="hover:underline">Support</a></li>
+                </ul>
+            </nav>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Responsive menu for desktop and mobile improves
+                usability.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Keeping navigation in familiar positions (top or side) helps users scan quickly and find what they need.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 5. Content First -->
+        <section id="content-first">
+            <h2 class="text-xl font-bold mb-2">5. Content First</h2>
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <h3 class="text-lg font-semibold">Welcome to Our Platform</h3>
+                <p class="text-sm mt-1 text-gray-600 dark:text-gray-400">Our product helps you save time and grow
+                    faster. Explore powerful features.</p>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Start with meaningful content, then apply UI
+                design.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Presenting meaningful content early ensures users understand the value before engaging with the
+                interface.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <h3 class="text-lg font-semibold">Why Choose Us?</h3>
+                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700 dark:text-gray-300">
+                    <li>Fast onboarding</li>
+                    <li>Scalable infrastructure</li>
+                    <li>24/7 support</li>
+                </ul>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Content drives structure and informs hierarchy.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Focusing on clear text and hierarchy before styling supports accessibility and communicates faster.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 6. Z-/F-Pattern Layout -->
+        <section id="z-pattern">
+            <h2 class="text-xl font-bold mb-2">6. Z-Pattern / F-Pattern Layout</h2>
+            <!-- Z-pattern demo layout -->
+            <div class="bg-white dark:bg-gray-800 rounded shadow p-6 md:grid md:grid-cols-2 gap-6 items-center">
+                <!-- Text content -->
+                <div class="space-y-3">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">Boost Your Productivity</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Streamline your workflow with our simple, powerful tools — crafted for fast navigation and clean
+                        layout.
+                    </p>
+                    <button
+                        class="mt-2 inline-block bg-blue-600 text-white text-sm px-4 py-2 rounded hover:bg-blue-700 transition">
+                        Get Started
+                    </button>
+                </div>
+                <!-- Visual + callout -->
+                <img src="https://www.gstatic.com/webp/gallery/2.webp" alt="Visual pattern diagram"
+                    class="rounded w-full max-w-sm mx-auto" />
+            </div>
+            <!-- Summary -->
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">
+                The Z-pattern follows a natural reading flow: top-left (logo), across to top-right (CTA), down
+                diagonally,
+                and across the bottom line — perfect for simple, visual-first layouts.
+            </p>
+            <!-- Explanation box -->
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                The Z-pattern mimics how users visually scan pages — starting from top-left, moving to top-right
+                (headline/CTA),
+                then diagonally down to bottom-left, and finally to the bottom-right. It’s ideal for landing pages with
+                a strong headline, hero image, and a clear call to action.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="space-y-2">
+                <h3 class="text-lg font-semibold">F-Pattern in Action</h3>
+                <!-- Simulated search result layout -->
+                <div class="bg-white dark:bg-gray-800 p-4 rounded shadow space-y-3 text-sm">
+                    <!-- Top Heading (eye lands here first) -->
+                    <div>
+                        <h4 class="text-blue-700 dark:text-blue-400 font-semibold">
+                            🔍 How to Optimize Website Speed
+                        </h4>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Discover techniques like image compression, lazy loading, and caching to improve site
+                            performance.
+                        </p>
+                    </div>
+                    <!-- Mid Heading -->
+                    <div>
+                        <h4 class="text-blue-700 dark:text-blue-400 font-semibold">
+                            ✅ Best Practices for Mobile Performance
+                        </h4>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Learn how to reduce render-blocking resources and keep time to interactive low.
+                        </p>
+                    </div>
+                    <!-- Final scan line — bottom content rarely gets deep attention -->
+                    <div>
+                        <h4 class="text-blue-700 dark:text-blue-400 font-semibold">
+                            📦 Tools for Measuring Speed
+                        </h4>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            PageSpeed Insights, Lighthouse, and WebPageTest are great places to start.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Supporting description -->
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                Users naturally scan down and across from top-left in a rough “F” shape, prioritizing headings and first
+                lines.
+            </p>
+            <!-- Explanation -->
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                The F-pattern reflects how people read digital content — focusing first on top headings and left-aligned
+                text. Designing with strong headings, short summaries, and left anchors improves readability and keeps
+                users engaged.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 7. Gestalt Principles -->
+        <section id="gestalt">
+            <h2 class="text-xl font-bold mb-2">7. Gestalt Principles</h2>
+            <div class="flex gap-4">
+                <div class="p-4 bg-white dark:bg-gray-800 rounded shadow w-full text-center">🔲🔲🔲</div>
+                <div class="p-4 bg-white dark:bg-gray-800 rounded shadow w-full text-center">🔳🔳🔳</div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Elements close together are perceived as related.
+                Use proximity, similarity, and continuity for visual clarity.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Proximity groups related elements together, reducing cognitive load and helping users make sense of the
+                UI quickly.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="grid grid-cols-2 gap-2 text-center">
+                <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">⭕️ ⭕️ ⭕️</div>
+                <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">⭕️ ⭕️ ⭕️</div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Equal spacing creates grouping. Uneven spacing
+                breaks continuity, changing perception.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Visual similarity makes related elements feel connected, even without borders or explicit grouping.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 8. Miller's Law -->
+        <section id="millers-law">
+            <h2 class="text-xl font-bold mb-2">8. Miller's Law</h2>
+            <ul class="list-disc list-inside space-y-1">
+                <li>Dashboard</li>
+                <li>Orders</li>
+                <li>Messages</li>
+                <li>Billing</li>
+                <li>Settings</li>
+                <li>Help</li>
+                <li>Logout</li>
+            </ul>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Limit visible items to 7±2 to avoid overwhelming
+                the user's short-term memory.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Short menus with 5-9 items align with the brain's working memory capacity, making navigation easier to
+                scan and remember.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="grid grid-cols-2 gap-2 text-sm">
+                <button class="bg-gray-100 dark:bg-gray-800 p-2 rounded shadow">Home</button>
+                <button class="bg-gray-100 dark:bg-gray-800 p-2 rounded shadow">Explore</button>
+                <button class="bg-gray-100 dark:bg-gray-800 p-2 rounded shadow">Upload</button>
+                <button class="bg-gray-100 dark:bg-gray-800 p-2 rounded shadow">Notifications</button>
+                <button class="bg-gray-100 dark:bg-gray-800 p-2 rounded shadow">Messages</button>
+                <button class="bg-gray-100 dark:bg-gray-800 p-2 rounded shadow">Settings</button>
+                <button class="bg-gray-100 dark:bg-gray-800 p-2 rounded shadow">Logout</button>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">A compact action panel follows the 7-item rule for
+                cognitive ease.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Presenting key actions as 7 buttons avoids overload and improves decision-making efficiency on mobile or
+                dense interfaces.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 9. Zeigarnik Effect -->
+        <section id="zeigarnik-effect">
+            <h2 class="text-xl font-bold mb-2">9. Zeigarnik Effect</h2>
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <p class="text-sm">Complete your profile to unlock features</p>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded h-2 mt-2">
+                    <div class="bg-blue-600 h-2 rounded" style="width: 60%"></div>
+                </div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Users are more likely to return to finish
+                incomplete tasks.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Showing incomplete progress nudges users to return and complete actions, leveraging psychological
+                tension from unfinished tasks.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <p class="text-sm">2 of 3 steps completed</p>
+                <div class="flex items-center space-x-2 mt-2">
+                    <span class="bg-green-500 w-4 h-4 rounded-full"></span>
+                    <span class="bg-green-500 w-4 h-4 rounded-full"></span>
+                    <span class="bg-gray-400 dark:bg-gray-600 w-4 h-4 rounded-full"></span>
+                </div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Step indicators visually reinforce the need to
+                complete flows.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Visual step markers reinforce ongoing progress and tap into the urge to “finish what's started” —
+                boosting form completion rates.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 10. Peak-End Rule -->
+        <section id="peak-end-rule">
+            <h2 class="text-xl font-bold mb-2">10. Peak-End Rule</h2>
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <p class="text-sm">🎉 "Thank you! Your purchase was successful."</p>
+                <p class="text-sm mt-1">Your order will arrive in 2-3 business days.</p>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Design memorable peak and end moments to influence
+                user satisfaction and recall.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Ending a process with a positive, clear confirmation boosts satisfaction and increases the chance of
+                future engagement.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <p class="text-sm">✨ "Congrats! You've completed the challenge!"</p>
+                <p class="text-sm mt-1">You earned a badge and unlocked a bonus.</p>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Positive endings and rewards leave a lasting
+                emotional impression.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Rewarding users with highlights like badges or achievements creates an emotional “peak” moment that
+                users will remember.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 11. Microinteractions -->
+        <section id="microinteractions">
+            <h2 class="text-xl font-bold mb-2">11. Microinteractions</h2>
+            <button
+                class="bg-gray-200 dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-full hover:scale-110 transition-transform">❤️
+                Like</button>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Microinteractions like this heart pulse provide
+                visual feedback and delight.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Animating buttons on interaction gives immediate feedback and makes the UI feel alive, playful, and
+                responsive.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <label class="flex items-center space-x-2">
+                <input type="checkbox" class="accent-blue-500 h-4 w-4 transition-all">
+                <span class="text-sm">Enable notifications</span>
+            </label>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Checkbox with animated state change offers quick
+                feedback on selection.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Even simple form elements benefit from subtle animations or color changes, reinforcing that the action
+                was registered.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 12. Component-Based Design -->
+        <section id="component-design">
+            <h2 class="text-xl font-bold mb-2">12. Component-Based Design</h2>
+            <div class="grid gap-2 max-w-md">
+                <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">🧩 Card Component</div>
+                <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">🧩 Button Component</div>
+                <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">🧩 Modal Component</div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Design systems thrive on reusable, modular building
+                blocks.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Reusable UI parts reduce duplication and ensure consistency throughout products, especially across pages
+                and teams.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="grid grid-cols-2 gap-3 max-w-md">
+                <div class="bg-white dark:bg-gray-800 p-3 rounded shadow text-center">🔘 Toggle</div>
+                <div class="bg-white dark:bg-gray-800 p-3 rounded shadow text-center">🔔 Notification Bell</div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Consistent components speed up development and
+                enforce visual integrity.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Breaking down UI into smaller atomic components (like toggles) improves scalability and makes interfaces
+                easier to maintain.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 13. Design Systems -->
+        <section id="design-systems">
+            <h2 class="text-xl font-bold mb-2">13. Design Systems</h2>
+            <p class="text-sm">Using Tailwind CSS + Figma library</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Design systems standardize components, spacing,
+                colors, and patterns for cohesive experiences.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Design systems unify code and design tools, enabling developers and designers to speak the same visual
+                language.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="text-sm bg-gray-100 dark:bg-gray-800 p-3 rounded shadow">
+                <p><strong>Tokens:</strong> spacing-sm = 8px, primary-color = #1D4ED8</p>
+                <p class="mt-1">Predefined variables ensure brand and design consistency.</p>
+            </div>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Tokens define foundational values like spacing or colors, making updates easier and enforcing visual
+                consistency everywhere.
+            </div>
+        </section>
+        <hr class="border-t-2 border-black dark:border-white my-8">
+
+        <!-- 14. Emotional Design -->
+        <section id="emotional-design">
+            <h2 class="text-xl font-bold mb-2">14. Emotional Design</h2>
+            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded shadow text-yellow-900 dark:text-yellow-100">
+                <p class="text-sm">🌟 “You're doing great! Keep going!”</p>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Emotional design builds trust and motivates users
+                by sparking joy, empathy, or encouragement.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Supportive copy and warm tones reduce anxiety and encourage users to keep going — especially in
+                onboarding or learning flows.
+            </div>
+        </section>
+        <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-48 mx-auto">
+        <section>
+            <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded shadow text-blue-900 dark:text-blue-100">
+                <p class="text-sm">🎈 “Nice job! You've completed 3 days in a row!”</p>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Small celebrations add delight and emotional
+                resonance to everyday actions.</p>
+            <div
+                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br />
+                Celebrations for streaks or goals give emotional payoff, increasing user retention and sense of
+                progress.
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+        const themeIcon = document.getElementById("themeIcon");
+
+        function setTheme(theme) {
+            document.documentElement.classList.toggle("dark", theme === "dark");
+            localStorage.setItem("theme", theme);
+            updateIcon(theme);
+        }
+
+        function updateIcon(theme) {
+            if (theme === "dark") {
+                // Moon Icon
+                themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M17.293 17.293A8 8 0 016.707 6.707a8.001 8.001 0 0010.586 10.586z" />`;
+            } else {
+                // Sun Icon
+                themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 3v1m0 16v1m8.66-9h-1M4.34 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 5a7 7 0 100 14 7 7 0 000-14z" />`;
+            }
+        }
+
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const activeTheme = savedTheme || (prefersDark ? "dark" : "light");
+
+        setTheme(activeTheme);
+
+        themeToggle.addEventListener("click", () => {
+            const isDark = document.documentElement.classList.contains("dark");
+            setTheme(isDark ? "light" : "dark");
+        });
+    </script>
+
+</body>
+
+</html>
