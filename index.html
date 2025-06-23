@@ -75,7 +75,7 @@
             </div>
             <div
                 class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-                <strong>Explanation:</strong><br>This hero layout uses scale and spacing to guide the user’s eyes. The
+                <strong>Explanation:</strong><br>This hero layout uses scale and spacing to guide the user's eyes. The
                 call-to-action buttons are prominent and styled for visibility.
             </div>
         </section>
@@ -182,18 +182,60 @@
 
         <!-- Proximity -->
         <section class="max-w-sm">
-            <h2 class="text-xl font-bold mb-2">5. Proximity</h2>
-            <div class="space-y-1">
-                <label class="block text-sm font-medium">Username</label>
-                <input type="text"
-                    class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white px-3 py-2 rounded-md">
-                <span class="text-xs text-red-500">Username is required</span>
-            </div>
-            <div
-                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-                <strong>Explanation:</strong><br>Related elements (label, input, error message) are placed closely
-                together
-                to form a visual group.
+            <h2 class="text-xl font-bold mb-4">5. Proximity</h2>
+            <div class="space-y-8">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Username</label>
+                    <input type="text"
+                        class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white px-3 py-2 rounded-md">
+                    <span class="text-xs text-red-500">Username is required</span>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Email</label>
+                    <div class="flex space-x-2">
+                        <input type="email"
+                            class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white"
+                            placeholder="you@example.com">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md">Join</button>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">No spam, unsubscribe anytime.</p>
+                </div>
+                <div class="space-y-1">
+                    <label class="block text-sm font-medium">Password</label>
+                    <input type="password"
+                        class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white px-3 py-2 rounded-md">
+                    <label class="block text-sm font-medium mt-3">Confirm Password</label>
+                    <input type="password"
+                        class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-black dark:text-white px-3 py-2 rounded-md">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Phone Number</label>
+                    <div class="flex space-x-2">
+                        <select
+                            class="w-1/3 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white">
+                            <option>+91</option>
+                            <option>+1</option>
+                            <option>+44</option>
+                        </select>
+                        <input type="tel"
+                            class="w-2/3 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white"
+                            placeholder="9876543210">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Schedule Date & Time</label>
+                    <div class="flex space-x-2">
+                        <input type="date"
+                            class="w-1/2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white">
+                        <input type="time"
+                            class="w-1/2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white">
+                    </div>
+                </div>
+                <div
+                    class="bg-blue-50 mt-4 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <strong>Explanation:</strong><br>
+                    Each input example groups related elements (label, field, helper/error text, button) closely together to form a clear visual and functional unit, reducing user effort and cognitive load.
+                </div>
             </div>
         </section>
         <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
@@ -207,7 +249,7 @@
             </div>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">No spam, unsubscribe anytime.</p>
             <div
-                class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                class="mt-8 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800">
                 <strong>Explanation:</strong><br>Input field and CTA button are grouped in one line to show their
                 functional relationship.
             </div>
@@ -275,7 +317,7 @@
 
         <!-- Scale & Proportion -->
         <section class="text-center">
-            <h2 class="text-5xl font-extrabold">8. Welcome</h2>
+            <h2 class="text-5xl font-extrabold">8. Scale & Proportion</h2>
             <p class="text-base text-gray-500 dark:text-gray-400 mt-2">Start exploring our platform now</p>
             <div
                 class="mt-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800 max-w-md mx-auto">
@@ -285,22 +327,69 @@
             </div>
         </section>
         <hr class="border-t-2 border-gray-300 dark:border-gray-500 w-52 mx-auto">
-        <section class="text-center space-y-2">
-            <h2 class="text-6xl font-black tracking-tight">Big Impact</h2>
-            <p class="text-md text-gray-600 dark:text-gray-400">Small details, huge results.</p>
+        <section class="text-center py-12 px-4">
+            <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
+                Featured Plan
+            </h2>
+            <p class="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">
+                Scale helps users identify what's most important, while proportion ensures elements relate harmoniously
+                in size.
+            </p>
+            <div class="grid sm:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10">
+                <!-- Basic Plan -->
+                <div class="border rounded-xl p-6 shadow-sm bg-white dark:bg-gray-900">
+                    <h3 class="text-xl font-semibold mb-2">Basic</h3>
+                    <p class="text-3xl font-bold text-blue-600 dark:text-blue-300 mb-4">$9<span
+                            class="text-base font-medium text-gray-500">/mo</span></p>
+                    <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-6">
+                        <li>✔ 1 project</li>
+                        <li>✔ Email support</li>
+                    </ul>
+                    <button class="px-4 py-2 rounded-lg text-white bg-blue-600 hover:bg-blue-700">
+                        Get Started
+                    </button>
+                </div>
+                <!-- Pro Plan (Emphasized) -->
+                <div class="border-2 border-blue-600 rounded-xl p-8 shadow-lg bg-blue-50 dark:bg-blue-800 scale-105">
+                    <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                    <p class="text-5xl font-extrabold text-blue-800 dark:text-white mb-4">$29<span
+                            class="text-lg font-medium text-blue-500">/mo</span></p>
+                    <ul class="text-base text-blue-800 dark:text-blue-100 space-y-1 mb-6">
+                        <li>✔ Unlimited projects</li>
+                        <li>✔ Priority support</li>
+                        <li>✔ Access to beta features</li>
+                    </ul>
+                    <button class="px-6 py-3 rounded-xl text-white font-semibold bg-blue-700 hover:bg-blue-800">
+                        Choose Pro
+                    </button>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="border rounded-xl p-6 shadow-sm bg-white dark:bg-gray-900">
+                    <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+                    <p class="text-3xl font-bold text-blue-600 dark:text-blue-300 mb-4">Custom</p>
+                    <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-6">
+                        <li>✔ Dedicated support</li>
+                        <li>✔ Custom integration</li>
+                    </ul>
+                    <button class="px-4 py-2 rounded-lg text-white bg-blue-600 hover:bg-blue-700">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
             <div
-                class="bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 text-sm p-4 rounded-lg border border-blue-200 dark:border-blue-800 max-w-md mx-auto">
-                <strong>Explanation:</strong><br>Proportional scale of headline versus body text shows visual hierarchy
-                and
-                emphasis.
+                class="mt-10 max-w-2xl mx-auto text-sm text-gray-500 dark:text-gray-400 text-left bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                <strong>Explanation:</strong><br>
+                The "Pro" plan uses larger text, padding, and scaling to visually emphasize its importance. This
+                demonstrates how adjusting scale and proportion can guide user attention and influence decision-making.
             </div>
         </section>
         <hr class="border-t-2 border-black dark:border-white my-8">
 
+
         <!-- Typography -->
         <section class="max-w-lg">
-            <h2 class="text-3xl font-bold mb-2">9. Typography Matters</h2>
-            <h3 class="text-xl font-semibold mb-1 text-gray-700 dark:text-gray-300">Subheading</h3>
+            <h2 class="text-4xl font-bold mb-2">9. Typography Matters</h2>
+            <h3 class="text-2xl font-semibold mb-1 text-gray-700 dark:text-gray-300">Subheading</h3>
             <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                 Clean typography improves readability and builds trust.
             </p>
