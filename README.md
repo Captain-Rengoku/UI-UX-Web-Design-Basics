@@ -1,5 +1,53 @@
 # UI-UX Basic Principles
 
+0. “Don't Make Me Think” (your interface should be so intuitive that users don’t have to figure things out.)
+— Steve Krug
+
+1. "Design is not just what it looks like and feels like. Design is how it works."
+— Steve Jobs
+
+2. "People ignore design that ignores people."
+— Frank Chimero
+
+3. "If you think good design is expensive, you should look at the cost of bad design."
+— Ralf Speth, Jaguar CEO
+
+4. "Good design is as little design as possible."
+— Dieter Rams
+
+5. "Usability is not only about ease of use but also about bringing something meaningful, having an impact on people’s lives."
+— UX Booth
+
+6. "A user interface is like a joke. If you have to explain it, it’s not that good."
+— Martin LeBlanc
+
+7. "You’re not your users."
+— UX Rule #1
+
+8. "The details are not the details. They make the design."
+— Charles Eames
+
+9. "Your job is to figure out what your users want before they do."
+— Don Norman
+
+10. "Make it simple, but significant."
+— Don Draper (Mad Men)
+
+11. "Content precedes design. Design in the absence of content is not design, it’s decoration."
+— Jeffrey Zeldman
+
+12. "The best products don’t focus on features, they focus on clarity."
+— Jason Fried
+
+13. "Every great design begins with an even better story."
+— Lorinda Mamo
+
+14. "In design, there are no shortcuts to great results."
+— Unknown
+
+15. "UX is about how it works. UI is about how it looks."
+— Common industry wisdom
+
 ## Part 1: Core Visual Design Principles (UI Basics)
 
 These form the foundation of visual layout, used by every designer and frontend developer:
